@@ -54,4 +54,24 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.step({
+  "name": "I select the fridge that comes recommended by AO",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "NativeConstructorAccessorImpl.java:-2"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I end up in my basket and add the complete installation bundle",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "NativeConstructorAccessorImpl.java:-2"
+});
+formatter.result({
+  "status": "passed"
+});
 });

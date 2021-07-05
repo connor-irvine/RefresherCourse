@@ -1,8 +1,9 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import utils.Driver;
 import org.openqa.selenium.WebDriver;
+import utils.Driver;
 
 
 public class Page {
@@ -25,7 +26,22 @@ public class Page {
     public void pickSamsungCheckbox() throws InterruptedException {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//span[text()='Samsung']")).click();
+        Thread.sleep(1000);
+    }
+
+    public void recommendedFridge() throws InterruptedException {
         Thread.sleep(2000);
+        driver.findElement(By.cssSelector("[data-testid ='add-to-basket-button']")).click();
+        Thread.sleep(1000);
+    }
+
+    public void shoppingBasket() throws InterruptedException {
+        String shoppingBasketUrl = driver.getCurrentUrl();
+        Assert.assertEquals(shoppingBasketUrl, "https://checkout.ao.com/shoppingbasket.aspx" );
+        Thread.sleep(2000);
+//        driver.findElement(By.cssSelector("[data-tag-bundle ='Complete']")).click();
+        driver.findElement(By.cssSelector("[data-tag-action ='continue']")).click();
+
     }
 }
 

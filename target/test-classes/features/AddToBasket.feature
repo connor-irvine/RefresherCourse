@@ -6,3 +6,5 @@ Feature: Visit an online store and add something to a basket
     Then I enter american fridge freezers into the search bar
     And I click the Search button
     When I want a Samsung Fridge I select the the checkbox
+    Then I select the fridge that comes recommended by AO
+    Then I end up in my basket and add the complete installation bundle

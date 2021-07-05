@@ -10,5 +10,7 @@ public class StepDefs extends Page implements En {
         Then("^I enter (.*) into the search bar$", (final String search) -> searchbarWebsite(search));
         And("^I click the Search button$", () -> searchWebsite());
         When("^I want a Samsung Fridge I select the the checkbox$", () -> pickSamsungCheckbox());
+        Then("^I select the fridge that comes recommended by AO$", () -> recommendedFridge());
+        Then("^I end up in my basket and add the complete installation bundle$", () -> shoppingBasket());
     }
 }
