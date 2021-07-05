@@ -13,10 +13,22 @@ public class Page {
         driver.navigate().to(url);
     }
 
-    public void getWebElement(final String search) throws InterruptedException {
-        driver.findElement(By.name("q")).sendKeys(search);
-        Thread.sleep(10000);
+    public void searchbarWebsite(final String search) throws InterruptedException {
+        driver.findElement(By.id("siteSearch-input")).sendKeys(search);
+    }
+
+    public void searchWebsite() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.findElement(By.id("siteSearch-item-0")).click();
+    }
+
+    public void pickSamsungCheckbox() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[text()='Samsung']")).click();
+        Thread.sleep(2000);
     }
 }
+
+
 
 
